@@ -10,8 +10,8 @@ public class HelloController {
     @Value("${app.message}")    // Inyectar una propiedad de application.properties
     String message;
 
-    @Value("${app.varexample}")
-    String username;
+//    @Value("${app.varexample}")
+//    String username;
 
     @GetMapping("/hola")
     public String holaMundo() {
