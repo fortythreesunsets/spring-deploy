@@ -1,14 +1,16 @@
 ## Despliegue de apps Spring Boot en heroku
 
-1. Crear archivo `system.properties` en la raíz del proyecto con el contenido:
+1. Generar archivo `.gitignore` en https://www.toptal.com/developers/gitignore/ con archivos Java, Maven e IntelliJ y agregar `.idea` en `#Generated Files`
+2. Crear archivo `system.properties` en la raíz del proyecto con el contenido:
 `java.runtime.version=17`
-2. Agregar al pom.xml:
-
-`<plugin>
+3. Agregar al pom.xml:
+```
+<plugin>
    <groupId>org.apache.maven.plugins</groupId>
    <artifactId>maven-resources-plugin</artifactId>
    <version>3.1.0</version>
-</plugin>`
+</plugin>
+```
 3. Tener configurado git en la computadora:
 
 `git config --global user.name "fortythreesunsets"`
@@ -20,4 +22,3 @@
 4. Subir el proyecto a GitHub desde IntelliJ IDEA desde la opción VSC > Share Project on GitHub
 5. Desde Heroku, crear app y elegir método GitHub y buscar el repositorio
 6. Habilitar deploy automático y ejecutar Deploy (manual la primera vez)
-7. Para monitorear la app, ir a la pestaña Overview en Heroku
